@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+renv/**
+.DS_Store
+.Rprofile
+*.hdf5
+*.Rproj
+*_cache/
+*_files/
