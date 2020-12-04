@@ -8,4 +8,4 @@ renv/**
 *.hdf5
 *.Rproj
 *_cache/
-*_files/
+/*_files
