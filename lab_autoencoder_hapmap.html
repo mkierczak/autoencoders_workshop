@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Marcin Kierczak | NBIS | 04-Dec-2020" />
+<meta name="author" content="Marcin Kierczak | NBIS | 08-Dec-2020" />
 
 
 <title>Autoencoder Lab in R</title>
@@ -347,7 +347,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Autoencoder Lab in R</h1>
 <h3 class="subtitle">visualizing HapMap phase 3 populations</h3>
-<h4 class="author">Marcin Kierczak | <b>NBIS</b> | 04-Dec-2020</h4>
+<h4 class="author">Marcin Kierczak | <b>NBIS</b> | 08-Dec-2020</h4>
 
 </div>
 
@@ -494,7 +494,7 @@ div.tocify {
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>encoder <span class="ot">&lt;-</span> </span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  input_layer <span class="sc">%&gt;%</span> </span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layer_dense</span>(<span class="at">units =</span> <span class="dv">1500</span>, <span class="at">activation =</span> act) <span class="sc">%&gt;%</span> </span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layer_batch_normalization</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layer_batch_normalization</span>() <span class="sc">%&gt;%</span> <span class="co"># accelerate the training and make it more stable (a trick of the trade:-)</span></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layer_dropout</span>(<span class="at">rate =</span> <span class="fl">0.2</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layer_dense</span>(<span class="at">units =</span> <span class="dv">500</span>, <span class="at">activation =</span> act) <span class="sc">%&gt;%</span></span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layer_dropout</span>(<span class="at">rate =</span> <span class="fl">0.1</span>) <span class="sc">%&gt;%</span></span>
@@ -650,7 +650,7 @@ A custom callback function may look like:</li>
 <h1><span class="header-section-number">8</span> Reproducibility note</h1>
 <p>Experimental conditions:</p>
 <ul>
-<li>Moon phase: 🌖.</li>
+<li>Moon phase: 🌗.</li>
 <li>Sun in the Zodiac sign of: 🏹.</li>
 <li>Chinese year of: 🐀.</li>
 <li>Recorded average strength of electromagic field: <span class="math inline">\(0.74\mu M\)</span> 🧙.</li>
@@ -695,7 +695,7 @@ A custom callback function may look like:</li>
 ## [41] lubridate_1.7.9.2 assertthat_0.2.1  rmarkdown_2.5     rstudioapi_0.13  
 ## [45] R6_2.5.0          nlme_3.1-149      compiler_4.0.3</code></pre>
 <p style="text-align: left; font-size: small;">
-Built on: <i class="fa fa-calendar" aria-hidden="true"></i> 04-Dec-2020 at <i class="fa fa-clock-o" aria-hidden="true"></i> 12:34:04.
+Built on: <i class="fa fa-calendar" aria-hidden="true"></i> 08-Dec-2020 at <i class="fa fa-clock-o" aria-hidden="true"></i> 09:28:38.
 </p>
 <hr/>
 <div>

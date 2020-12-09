@@ -185,7 +185,7 @@ input_layer <- layer_input(shape = dim(train_data)[2])
 encoder <- 
   input_layer %>% 
   layer_dense(units = 1500, activation = act) %>% 
-  layer_batch_normalization() %>% 
+  layer_batch_normalization() %>% # accelerate the training and make it more stable (a trick of the trade:-)
   layer_dropout(rate = 0.2) %>% 
   layer_dense(units = 500, activation = act) %>%
   layer_dropout(rate = 0.1) %>%

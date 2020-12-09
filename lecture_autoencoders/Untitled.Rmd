@@ -1,0 +1,99 @@
+---
+title: "Autoencoders in R"
+subtitle: "Neural Nets and Deep Learning"
+author: "`r paste0('<b>Marcin Kierczak</b> | ',format(Sys.time(), '%d-%b-%Y'))`"
+institute: NBIS, SciLifeLab
+keywords: bioinformatics, course, scilifelab, nbis, deep learning, keras, rstats, ann, autoencoders
+output:
+  xaringan::moon_reader:
+    encoding: 'UTF-8'
+    self_contained: false
+    chakra: 'assets/remark-latest.min.js'
+    css: 'assets/presentation.css'
+    lib_dir: libs
+    nature:
+      ratio: '4:3'
+      highlightLanguage: r
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "%current%/%total%"
+---
+exclude: true
+count: false
+
+```{r,echo=FALSE,child="assets/header-presentation.Rmd"}
+```
+
+<!-- ------------ Only edit title, subtitle & author above this ------------ -->
+
+```{r,echo=FALSE,message=FALSE,warning=FALSE}
+# load the packages you need
+#library(dplyr)
+#library(tidyr)
+#library(stringr)
+#library(ggplot2)
+library(emo)
+```
+
+---
+name: topic1
+
+## `Keras` and `TensorFlow` in R
+
+* you need TensorFlow first,
+--
+
+* than, you also need the `tensorflow` [package](https://tensorflow.rstudio.com/installation/)
+
+--
+* good `r emo::ji('happy')` news is you do not need to install manually...
+
+--
+* install `keras` package instead
+
+--
+```{r, eval=FALSE}
+install.packages('keras')
+keras::install_keras()
+```
+
+--
+* if your graphics card supports CUDA and want to use the power of GPU. 
+```{r, eval=FALSE}
+install.packages('keras')
+keras::install_keras(tensorflow = 'gpu')
+```
+
+--
+* at least two packages provide R interfaces to `Keras`: `keras` by RStudio and `kerasR`. The latter does not expose all Keras functionalities to R though. 
+
+---
+name: topic2
+
+## R `r emo::ji('heart')` keras & TensorFlow
+
+There are excellent resources for learning:
+
+* about TensorFlow [package](https://tensorflow.rstudio.com/guide/tensorflow/eager_execution/) from RStudio,
+* excellent book by Chollet & Allaire
+![]('assets/deep-learning-with-r.jpeg')
+
+<!-- --------------------- Do not edit this and below --------------------- -->
+
+---
+name: end_slide
+class: end-slide, middle
+count: false
+
+# Thank you. Questions?
+
+```{r,echo=FALSE,child="assets/footer-presentation.Rmd"}
+```
+
+```{r,include=FALSE,eval=FALSE}
+# manually run this to render this document to HTML
+rmarkdown::render("presentation_demo.Rmd")
+# manually run this to convert HTML to PDF
+#pagedown::chrome_print("presentation_demo.html",output="presentation_demo.pdf")
+```
